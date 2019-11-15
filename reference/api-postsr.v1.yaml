@@ -1,0 +1,44 @@
+openapi: 3.0.0
+info:
+  title: Api PostSr
+  version: '1.0'
+  contact:
+    name: test
+  description: kdkdk
+servers:
+  - url: 'https://home.courierexe.ru/api/'
+paths:
+  /:
+    get:
+      summary: Your GET endpoint
+      tags: []
+      responses: {}
+    post:
+      summary: StatusReq
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties: {}
+              examples:
+                example-1: {}
+      description: Получить инфо по ордерам
+      requestBody:
+        content:
+          application/xml:
+            schema:
+              type: object
+              properties: {}
+            examples:
+              example-1: {}
+        description: |-
+          <?xml version="1.0" encoding="UTF-8" ?>
+          <statusreq>
+            <auth extra="10" login="test" pass="testp"></auth>
+            <quickstatus>YES</quickstatus>
+          </statusreq>
+components:
+  schemas: {}
